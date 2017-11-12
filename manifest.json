@@ -1,0 +1,25 @@
+{
+  "name": "reddit user stats",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Get stats on a specific reddit user's activity",
+  "homepage_url": "http://yomills.com",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.reddit.com/r/*/comments/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}
